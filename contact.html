@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="UTF-8" />
+		<title>Josefien Matla - Contact</title>
+		<link rel="stylesheet" href="stylesheet.css" />
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body class="contact">
+		<header>
+			<!-- Navigatie -->
+			<nav>
+				<img
+					class="nav-img"
+					src="img/logoJM.png"
+					alt="Josefien Matla logo"
+				/>
+
+				<div id="burgerMenu" tabindex="0">
+					Menu
+					<svg viewBox="0 0 25 21">
+						<rect x="0" y="0" width="25" height="3" />
+						<rect x="0" y="9" width="25" height="3" />
+						<rect x="0" y="18" width="25" height="3" />
+					</svg>
+				</div>
+
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<h1 class="contactpagina">Neem gerust contact met mij op</h1>
+
+			<form
+				id="contactForm"
+				method="POST"
+				action="mailto:josefienmatla@gmail.com"
+				class="contact-form"
+			>
+				<input
+					type="text"
+					id="name"
+					class="form-control"
+					placeholder="Naam"
+					required=""
+					data-error="Voer je naam in "
+				/>
+				<div class="help-block with-errors"></div>
+
+				<input
+					type="email"
+					class="email form-control"
+					id="email"
+					placeholder="E-mail"
+					required=""
+					data-error="Voer je email in"
+				/>
+				<div class="help-block with-errors"></div>
+
+				<textarea
+					id="message"
+					rows="7"
+					placeholder="Bericht"
+					class="form-control"
+					required=""
+					data-error="voer je bericht in"
+				></textarea>
+				<div class="help-block with-errors"></div>
+
+				<div class=" text-center">
+					<button
+						type="submit"
+						id="submit"
+						class="add-btn contact-btn"
+					>
+						Verstuur Bericht
+					</button>
+				</div>
+			</form>
+		</main>
+
+		<footer>
+			<div class="kolomTwee">
+				<div>
+					<p>
+						E-mail:
+						<a href="mailto:josefien.matla@gmail.com"
+							>Josefien.matla@gmail.com</a
+						>
+					</p>
+				</div>
+				<div>
+					<p>
+						Telefoonnummer:
+						<a href="tel:+31683240503">06 - 83 24 05 03</a>
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- hier wordt de javascript gekoppeld-->
+		<script src="script.js"></script>
+	</body>
+</html>

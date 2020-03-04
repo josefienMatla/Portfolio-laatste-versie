@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="UTF-8" />
+		<title>Josefien Matla - Sleepy Stone</title>
+		<link rel="stylesheet" href="stylesheet.css" />
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body class="project">
+		<header>
+			<!-- Navigatie -->
+			<nav>
+				<img
+					class="nav-img"
+					src="img/logoJM.png"
+					alt="Josefien Matla logo"
+				/>
+
+				<div id="burgerMenu" tabindex="0">
+					Menu
+					<svg viewBox="0 0 25 21">
+						<rect x="0" y="0" width="25" height="3" />
+						<rect x="0" y="9" width="25" height="3" />
+						<rect x="0" y="18" width="25" height="3" />
+					</svg>
+				</div>
+
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<input
+				type="button"
+				value="<"
+				onClick="history.back()"
+				class="back-button"
+			/>
+
+			<section class="header full centreren">
+				<div class="kolomTwee">
+					<div>
+						<h1>Sleepy Stone</h1>
+						<p>
+							Rugfit is een app voor rugbyers die graag beter
+							willen worden in hun sport en van hun fouten willen
+							leren. Deze app bied verschillende functies zoals,
+							je traningschema en je coach opmerkingen en je
+							voedingschema.
+						</p>
+					</div>
+
+					<img src="img/sleepy%20stone%20steen%20.png" alt="fles" />
+				</div>
+			</section>
+
+			<section class="groen large centreren">
+				<div class="kolomEen">
+					<div class="responsive-embed widescreen">
+						<iframe
+							width="560"
+							height="315"
+							src="https://www.youtube.com/embed/qoqur6dcJL4"
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						></iframe>
+					</div>
+
+					<div class="headertekst">
+						<p>
+							Aqua Buddy hebben we in opdracht van RE-SET gemaakt
+							zij zijn een bedrijf dat voor duurzaam staan en
+							wilde graag dat wij een oplossing gingen verzinnen
+							voor het feit dat er teveel PET-flessen op de
+							Amstelcampus gekocht worden
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="large centreren">
+				<div class="kolomTwee">
+					<div>
+						<img
+							src="img/Fles%20en%20sleutelhanger%20+%20bluetooth.png"
+							alt=""
+						/>
+					</div>
+
+					<div>
+						<p>
+							Design Challenge “Hoe kan een bezitter van een bidon
+							met behulp van een IOT oplossing, zijn bidon niet
+							vergeten mee te nemen, zodat hij geen PET fles hoeft
+							te kopen.”
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="groen large centreren">
+				<div class="kolomTwee">
+					<div>
+						<p>
+							State 1: Connectie tussen band en sleutelhanger
+							wordt verbroken Je hebt een sleutelhanger en een
+							band voor om je bidon.Deze twee staan in verbinding
+							met elkaar door middel van bluetooth. Zodra de
+							connectie tussen band en sleutelhanger wordt
+							verbroken checkt de sleutelhanger of het moet
+							trillen. De sleutelhanger zal trillen in korte
+							trillingen van 2 seconde met 1 seconde pauze
+							ertussen.
+						</p>
+					</div>
+
+					<div>
+						<img
+							src="img/trillen%20als%20de%20verbinding%20verbreekt.png"
+							alt=""
+						/>
+					</div>
+				</div>
+			</section>
+
+			<section class="large centreren">
+				<div class="kolomTwee">
+					<div>
+						<img
+							src="img/klik%20knop%20voor%20stop%20trilling%20.png"
+							alt=""
+						/>
+					</div>
+
+					<div>
+						<p>
+							State 2 : Trillen van sleutelhanger Door de
+							trillingen word je eraan herinnert dat jij jouw
+							bidon vergeet. Door op de knop te drukken zal de
+							sleutelhanger stoppen met trillen.
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="kolomTwee">
+				<div>
+					<p>
+						E-mail:
+						<a href="mailto:josefien.matla@gmail.com"
+							>Josefien.matla@gmail.com</a
+						>
+					</p>
+				</div>
+				<div>
+					<p>
+						Telefoonnummer:
+						<a href="tel:+31683240503">06 - 83 24 05 03</a>
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- hier wordt de javascript gekoppeld-->
+		<script src="script.js"></script>
+	</body>
+</html>
