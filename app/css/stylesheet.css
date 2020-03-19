@@ -612,6 +612,8 @@ main {
   margin-top: 5rem; }
 
 section {
+  width: 100%;
+  height: auto;
   padding: 3rem 1rem; }
   section.green {
     background-color: #d3ebe8; }
@@ -685,6 +687,48 @@ section {
   width: 100%;
   height: auto; }
 
+/*
+ * Projecten
+ */
+.projecten {
+  background-color: #d3ebe8;
+  padding-bottom: 40px;
+  margin-bottom: 70px; }
+  .projecten .section-title {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 30px;
+    text-align: center; }
+
+.project-group {
+  grid-gap: 3em;
+  display: grid;
+  grid-auto-rows: 280px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  max-width: 1440px;
+  margin: auto; }
+  .project-group article {
+    box-sizing: border-box;
+    position: relative;
+    padding: 5px;
+    border: 0px, 20px, 20px, 0px;
+    border: 2px #707070;
+    background-color: #ededed;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2); }
+    .project-group article:hover {
+      background-color: #d3e0de; }
+    .project-group article img {
+      width: 100%;
+      height: 70%;
+      object-fit: cover; }
+    .project-group article .title {
+      margin: 0.5em 0.5em 0;
+      font-size: 20px; }
+    .project-group article p {
+      margin: 0.2em 0.5em 0;
+      color: #908989;
+      font-size: 17px; }
+
 /* Footer
    ========================================================================== */
 footer {
@@ -694,6 +738,27 @@ footer {
   background-color: #b0cdc9;
   text-align: center;
   font-size: 20px; }
+
+/* Misc
+   ========================================================================== */
+/* Responsive embed */
+.responsive-embed {
+  position: relative;
+  height: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 75%;
+  overflow: hidden; }
+  .responsive-embed.widescreen {
+    padding-bottom: 56.25%; }
+  .responsive-embed iframe,
+  .responsive-embed object,
+  .responsive-embed embed,
+  .responsive-embed video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 /* ==========================================================================
    NOT REFACTORED
@@ -733,61 +798,6 @@ footer {
   display: flex;
   align-items: center;
   font-size: 18px; }
-
-/*
- * Projecten
- */
-.container-projecten {
-  background-color: #d3ebe8;
-  padding-bottom: 40px;
-  margin-bottom: 70px; }
-
-.container-projecten .mijnwerk {
-  padding-top: 40px;
-  padding-bottom: 30px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 30px;
-  text-align: center; }
-
-.projecten {
-  grid-gap: 3em;
-  display: grid;
-  grid-auto-rows: 280px;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  max-width: 1400px;
-  margin: auto;
-  padding: 10px; }
-
-.projecten article {
-  box-sizing: border-box;
-  position: relative;
-  margin-top: 20px;
-  padding: 5px;
-  border: 0px, 20px, 20px, 0px;
-  border: 2px #707070;
-  background-color: #ededed;
-  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2); }
-
-.projecten article img {
-  width: 100%;
-  height: 70%;
-  object-fit: cover; }
-
-.projecten article h1 {
-  margin-top: 0.5em;
-  margin-right: 0.5em;
-  margin-left: 0.5em;
-  font-size: 20px; }
-
-.projecten article p {
-  margin-top: 0.2em;
-  margin-right: 0.6em;
-  margin-left: 0.6em;
-  color: #908989;
-  font-size: 17px; }
-
-.projecten article:hover {
-  background: #d3e0de; }
 
 /* project */
 .project-back {
@@ -881,27 +891,6 @@ footer {
 .add-btn.contact-btn:hover {
   border: 4px solid #2a564f;
   background: #2a564f; }
-
-/* Responsive embed */
-.responsive-embed {
-  position: relative;
-  height: 0;
-  margin-bottom: 1rem;
-  padding-bottom: 75%;
-  overflow: hidden; }
-
-.responsive-embed.widescreen {
-  padding-bottom: 56.25%; }
-
-.responsive-embed iframe,
-.responsive-embed object,
-.responsive-embed embed,
-.responsive-embed video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
 
 /*
  * Responsive
