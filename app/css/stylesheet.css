@@ -447,10 +447,16 @@ template {
 html {
   box-sizing: border-box; }
 
-html, body, header, main, footer {
+html,
+body,
+header,
+main,
+footer {
   width: 100%; }
 
-html, body, main {
+html,
+body,
+main {
   min-height: 100vh; }
 
 html,
@@ -461,7 +467,8 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: roboto, sans-serif; }
+  font-family: roboto, sans-serif;
+  line-height: 1.5; }
 
 img {
   display: inline-block;
@@ -524,7 +531,8 @@ header {
 
 .logo {
   margin-right: auto; }
-  .logo, .logo img {
+  .logo,
+  .logo img {
     height: 100%; }
   .logo img {
     width: auto; }
@@ -597,7 +605,7 @@ nav {
     nav a {
       line-height: 3rem; } }
 
-/* Main
+/* Content
    ========================================================================== */
 main {
   height: auto;
@@ -608,18 +616,74 @@ section {
   section.green {
     background-color: #d3ebe8; }
 
+/*
+ * Landing image
+ */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 5rem);
+  padding: 200px 1rem 1rem;
+  background-image: url("../img/josefien-malta.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: auto 93%; }
+  .hero .wrapper {
+    display: flex;
+    justify-content: space-between; }
+    .hero .wrapper > div {
+      flex: 1; }
+  .hero .title {
+    font-size: 80px;
+    margin-top: 0;
+    margin-bottom: 1rem; }
+
+/* Home */
+.home .hero .title {
+  font-size: 50px; }
+
+.home .hero p {
+  font-size: 20px; }
+
+.home .hero .wrapper {
+  display: flex;
+  justify-content: space-between; }
+
+.home .hero .design,
+.home .hero .code {
+  font-weight: bold; }
+  .home .hero .design p,
+  .home .hero .code p {
+    display: none;
+    visibility: hidden; }
+
+.home .hero .code {
+  text-align: right; }
+
+@media (min-width: 750px) {
+  .home .hero .wrapper {
+    max-width: 1440px;
+    margin: 0 auto; }
+  .home .hero .design,
+  .home .hero .code {
+    min-width: 320px;
+    max-width: 27.5%;
+    padding: 1rem; }
+    .home .hero .design p,
+    .home .hero .code p {
+      display: block;
+      visibility: visible; }
+  .home .hero .code {
+    background-color: white; } }
+
 /* About */
 .about .hero {
   font-size: 20px; }
 
-.about .title {
-  font-size: 80px; }
-
-.about .content {
-  font-size: 18px; }
-  .about .content img {
-    width: 100%;
-    height: auto; }
+.about .content img {
+  width: 100%;
+  height: auto; }
 
 /* Footer
    ========================================================================== */
@@ -669,39 +733,6 @@ footer {
   display: flex;
   align-items: center;
   font-size: 18px; }
-
-/*
- * Landing image
- */
-.landingImg {
-  /* display: grid;
-    position: relative;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr; */
-  min-height: calc(100vh - 5rem);
-  background: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0)), url("../img/Josefien.%20Matla.png");
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: auto 93%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 200px 20px 20px; }
-
-.landingImg .titel {
-  display: flex;
-  justify-content: space-between; }
-
-.landingImg div h1 {
-  font-size: 50px; }
-
-.landingImg .Design {
-  font-family: roboto, bold;
-  text-align: left; }
-
-.landingImg .titelcode {
-  font-family: roboto, bold;
-  text-align: right; }
 
 /*
  * Projecten
@@ -875,26 +906,8 @@ footer {
 /*
  * Responsive
  */
-/* Mobiel */
-@media screen and (max-width: 480px) {
-  .landingImg div p {
-    display: none; } }
-
 /* Tablet */
 @media screen and (min-width: 481px) {
-  .landingImg div p {
-    font-size: 25px; }
-  .landingImg .titel > div {
-    max-width: 25%; }
-  .landingImg .titel {
-    max-width: 1200px;
-    margin: 0 auto; }
-  .titelcode {
-    font-family: roboto, bold;
-    text-align: right;
-    background-color: white; }
-  .landingImg .titel > div {
-    padding: 20px; }
   /* Sections */
   section.centreren {
     display: flex;
@@ -913,7 +926,7 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 20px; }
   /* About */
-  .about .landingImg {
+  .about .hero {
     background-position: right -275px bottom;
     padding-top: 20px; }
   .about .titel {
