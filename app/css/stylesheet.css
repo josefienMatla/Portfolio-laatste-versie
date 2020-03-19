@@ -505,6 +505,10 @@ select,
 textarea {
   font-family: inherit; }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
 p {
   margin-bottom: 1rem; }
 
@@ -650,7 +654,6 @@ section {
       flex: 1; }
   .hero .title {
     font-size: 80px;
-    margin-top: 0;
     margin-bottom: 1rem; }
 
 /* Home */
@@ -664,7 +667,7 @@ section {
     font-size: 50px; }
   .home .hero p {
     font-size: 20px; }
-  .home .hero .wrapper {
+  .home .hero .container {
     display: flex;
     justify-content: space-between; }
   .home .hero .design,
@@ -678,7 +681,7 @@ section {
     text-align: right; }
 
 @media (min-width: 750px) {
-  .home .hero .wrapper {
+  .home .hero .container {
     max-width: 1440px;
     margin: 0 auto; }
   .home .hero .design,
@@ -708,7 +711,7 @@ section {
 @media (min-width: 750px) {
   .about .hero {
     background-position: right -275px bottom; }
-  .about .titel {
+  .about .container {
     max-width: 1000px;
     margin: 0 auto;
     width: 100%; } }
@@ -721,7 +724,6 @@ section {
   padding-bottom: 40px;
   margin-bottom: 70px; }
   .projecten .section-title {
-    margin-top: 0;
     margin-bottom: 2rem;
     font-size: 30px;
     text-align: center; }
