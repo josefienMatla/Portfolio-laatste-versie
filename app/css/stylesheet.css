@@ -347,7 +347,7 @@ footer .kolomTwee {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr; */
   min-height: calc(100vh - 5rem);
-  background: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0)), url("img/Josefien.%20Matla.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0)), url("../img/Josefien.%20Matla.png");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: auto 93%;
