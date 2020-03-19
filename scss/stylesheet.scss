@@ -336,14 +336,18 @@ section {
 	}
 }
 
+.home .hero,
+.about .hero {
+	background-image: url('../img/josefien-malta.png');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: auto 93%;
+}
+
 /* Home */
 .home {
 	.hero {
 		padding: 200px 1rem 1rem;
-		background-image: url('../img/josefien-malta.png');
-		background-position: center bottom;
-		background-repeat: no-repeat;
-		background-size: auto 93%;
 
 		.title {
 			font-size: 50px;
@@ -353,7 +357,7 @@ section {
 			font-size: 20px;
 		}
 
-		.container {
+		.wrapper {
 			display: flex;
 			justify-content: space-between;
 		}
@@ -376,7 +380,7 @@ section {
 	// Desktop
 	@media (#{$bp-larger-than-tablet}) {
 		.hero {
-			.container {
+			.wrapper {
 				max-width: $container-width;
 				margin: 0 auto;
 			}
@@ -403,10 +407,6 @@ section {
 /* About */
 .about {
 	.hero {
-		background-image: url('../img/josefien-malta.png');
-		background-position: center bottom;
-		background-repeat: no-repeat;
-		background-size: auto 93%;
 		font-size: 20px;
 	}
 
@@ -421,7 +421,7 @@ section {
 			background-position: right -275px bottom;
 		}
 
-		.container {
+		.wrapper {
 			max-width: 1000px;
 			margin: 0 auto;
 			width: 100%;
@@ -429,16 +429,14 @@ section {
 	}
 }
 
-/*
- * Projecten
- */
-
+/* Projecten */
 .projecten {
 	background-color: #d3ebe8;
 	padding-bottom: 40px;
 	margin-bottom: 70px;
 
 	.section-title {
+		margin-top: 0;
 		margin-bottom: 2rem;
 		font-size: 30px;
 		text-align: center;
@@ -512,6 +510,71 @@ section {
 	position: fixed;
 	top: 6rem;
 	left: 1rem;
+}
+
+/* Contact */
+.contact .section-title {
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.contact-form {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+
+	input[type='text'],
+	input[type='email'],
+	textarea {
+		width: 100%;
+		margin-bottom: 2rem;
+		padding-left: 20px;
+		border: 1px solid #ccc;
+		border-radius: $global-radius;
+		font-size: 1rem;
+	}
+
+	input[type='text'],
+	input[type='email'],
+	textarea {
+		height: 45px;
+	}
+
+	textarea {
+		height: 180px;
+		padding: 16px 20px;
+	}
+
+	button {
+		display: inline-block;
+		padding: 1rem;
+		border: 4px solid #3f7a6f;
+		border-radius: 6px;
+		background: #3f7a6f;
+		color: #fff;
+		font-size: 16px;
+		text-transform: uppercase;
+
+		&:hover {
+			border: 4px solid #2a564f;
+			background: #2a564f;
+		}
+	}
+
+}
+
+// Tablet
+@media (#{$bp-larger-than-phablet}) {
+	.contact-form {
+		width: 75%;
+	}
+}
+
+// Desktop
+@media (#{$bp-larger-than-tablet}) {
+	.contact-form {
+		width: 50%;
+	}
 }
 
 /* Footer
@@ -593,87 +656,4 @@ footer {
 	display: flex;
 	align-items: center;
 	font-size: 18px;
-}
-
-/*
- * Contact
- */
-
-.contact {
-	text-align: center;
-}
-
-.contact main {
-	padding: 20px;
-}
-
-.contact-form {
-	display: block;
-	width: 100%;
-	margin: 0 auto;
-}
-
-.contact-form input[type='text'] {
-	margin-top: 30px;
-}
-
-.contact-form input[type='text'],
-.contact-form input[type='email'] {
-	width: 100%;
-	height: 45px;
-	margin-bottom: 30px;
-	padding-left: 20px;
-	border: 1px solid #ccc;
-	border-radius: 10px;
-	font-size: 16px;
-}
-
-.contact-form textarea#message {
-	width: 100%;
-	height: 180px;
-	padding: 20px;
-	border: 1px solid #ccc;
-	border-radius: 10px;
-	font-size: 16px;
-}
-
-.add-btn.contact-btn {
-	display: inline-block;
-	margin-top: 30px;
-	padding: 20px;
-	border: 4px solid #3f7a6f;
-	border-radius: 6px;
-	background: #3f7a6f;
-	color: #fff;
-	font-size: 16px;
-	text-transform: uppercase;
-}
-
-.add-btn.contact-btn:hover {
-	border: 4px solid #2a564f;
-	background: #2a564f;
-}
-
-/*
- * Responsive
- */
-
-/* Tablet */
-@media screen and (min-width: 481px) {
-
-
-
-
-	/* Contact */
-	.contact-form {
-		width: 75%;
-	}
-}
-
-/* Desktop */
-@media screen and (min-width: 64rem) {
-	/* Contact */
-	.contact-form {
-		width: 50%;
-	}
 }

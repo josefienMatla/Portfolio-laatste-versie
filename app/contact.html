@@ -38,45 +38,44 @@
 		</header>
 
 		<main class="content">
-			<h1 class="contactpagina">Neem gerust contact met mij op</h1>
+			<section>
+				<h1 class="section-title">Neem gerust contact met mij op</h1>
+				<form
+					id="contactForm"
+					method="POST"
+					action="mailto:josefienmatla@gmail.com"
+					class="contact-form"
+				>
+					<input
+						type="text"
+						id="name"
+						class="form-control"
+						placeholder="Naam"
+						required=""
+						data-error="Voer je naam in "
+					/>
+					<div class="help-block with-errors"></div>
 
-			<form
-				id="contactForm"
-				method="POST"
-				action="mailto:josefienmatla@gmail.com"
-				class="contact-form"
-			>
-				<input
-					type="text"
-					id="name"
-					class="form-control"
-					placeholder="Naam"
-					required=""
-					data-error="Voer je naam in "
-				/>
-				<div class="help-block with-errors"></div>
+					<input
+						type="email"
+						class="email form-control"
+						id="email"
+						placeholder="E-mail"
+						required=""
+						data-error="Voer je email in"
+					/>
+					<div class="help-block with-errors"></div>
 
-				<input
-					type="email"
-					class="email form-control"
-					id="email"
-					placeholder="E-mail"
-					required=""
-					data-error="Voer je email in"
-				/>
-				<div class="help-block with-errors"></div>
+					<textarea
+						id="message"
+						rows="7"
+						placeholder="Bericht"
+						class="form-control"
+						required=""
+						data-error="voer je bericht in"
+					></textarea>
+					<div class="help-block with-errors"></div>
 
-				<textarea
-					id="message"
-					rows="7"
-					placeholder="Bericht"
-					class="form-control"
-					required=""
-					data-error="voer je bericht in"
-				></textarea>
-				<div class="help-block with-errors"></div>
-
-				<div class=" text-center">
 					<button
 						type="submit"
 						id="submit"
@@ -84,8 +83,8 @@
 					>
 						Verstuur Bericht
 					</button>
-				</div>
-			</form>
+				</form>
+			</section>
 		</main>
 
 		<footer>
