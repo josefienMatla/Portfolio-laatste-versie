@@ -603,6 +603,24 @@ main {
   height: auto;
   margin-top: 5rem; }
 
+section {
+  padding: 3rem 1rem; }
+  section.green {
+    background-color: #d3ebe8; }
+
+/* About */
+.about .hero {
+  font-size: 20px; }
+
+.about .title {
+  font-size: 80px; }
+
+.about .content {
+  font-size: 18px; }
+  .about .content img {
+    width: 100%;
+    height: auto; }
+
 /* Footer
    ========================================================================== */
 footer {
@@ -642,10 +660,6 @@ footer {
   color: white;
   font-size: 16px;
   padding: 16px 32px; }
-
-/* Sections */
-section.groen {
-  background-color: #d3ebe8; }
 
 .kolomEen,
 .kolomTwee {
@@ -688,37 +702,6 @@ section.groen {
 .landingImg .titelcode {
   font-family: roboto, bold;
   text-align: right; }
-
-/*
- * About
- */
-#abouttekst h1 {
-  font-size: 80px; }
-
-#abouttekst p {
-  font-size: 20px; }
-
-.aboutmeall {
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 20px; }
-
-.aboutmep {
-  display: flex;
-  align-items: center;
-  font-size: 18px; }
-
-#aboutme {
-  background-color: #d3ebe8;
-  padding: 20px;
-  margin-bottom: 70px; }
-
-#aboutme img {
-  width: 100%;
-  height: auto; }
 
 /*
  * Projecten
