@@ -437,11 +437,6 @@ template {
   display: table;
   clear: both; }
 
-@media (min-width: 750px) {
-  .row.centered {
-    display: flex;
-    align-items: center; } }
-
 /* General
    ========================================================================== */
 *,
@@ -519,6 +514,10 @@ li {
 a {
   color: black;
   text-decoration: none; }
+
+img.centered {
+  display: block;
+  margin: 0 auto; }
 
 /* Header
    ========================================================================== */
@@ -622,6 +621,19 @@ section {
   padding: 3rem 1rem; }
   section.green {
     background-color: #d3ebe8; }
+  section.full {
+    min-height: calc(100vh - 5rem); }
+  section.large {
+    min-height: 75vh; }
+  section.medium {
+    min-height: 50vh; }
+  section.small {
+    min-height: 25vh; }
+
+@media (min-width: 750px) {
+  section.centered, section.centered .row {
+    display: flex;
+    align-items: center; } }
 
 /*
  * Landing image
@@ -630,12 +642,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: calc(100vh - 5rem);
-  padding: 200px 1rem 1rem;
-  background-image: url("../img/josefien-malta.png");
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: auto 93%; }
+  min-height: calc(100vh - 5rem); }
   .hero .wrapper {
     display: flex;
     justify-content: space-between; }
@@ -647,26 +654,28 @@ section {
     margin-bottom: 1rem; }
 
 /* Home */
-.home .hero .title {
-  font-size: 50px; }
-
-.home .hero p {
-  font-size: 20px; }
-
-.home .hero .wrapper {
-  display: flex;
-  justify-content: space-between; }
-
-.home .hero .design,
-.home .hero .code {
-  font-weight: bold; }
-  .home .hero .design p,
-  .home .hero .code p {
-    display: none;
-    visibility: hidden; }
-
-.home .hero .code {
-  text-align: right; }
+.home .hero {
+  padding: 200px 1rem 1rem;
+  background-image: url("../img/josefien-malta.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: auto 93%; }
+  .home .hero .title {
+    font-size: 50px; }
+  .home .hero p {
+    font-size: 20px; }
+  .home .hero .wrapper {
+    display: flex;
+    justify-content: space-between; }
+  .home .hero .design,
+  .home .hero .code {
+    font-weight: bold; }
+    .home .hero .design p,
+    .home .hero .code p {
+      display: none;
+      visibility: hidden; }
+  .home .hero .code {
+    text-align: right; }
 
 @media (min-width: 750px) {
   .home .hero .wrapper {
@@ -686,11 +695,23 @@ section {
 
 /* About */
 .about .hero {
+  background-image: url("../img/josefien-malta.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: auto 93%;
   font-size: 20px; }
 
 .about .content img {
   width: 100%;
   height: auto; }
+
+@media (min-width: 750px) {
+  .about .hero {
+    background-position: right -275px bottom; }
+  .about .titel {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%; } }
 
 /*
  * Projecten
@@ -733,6 +754,27 @@ section {
       margin: 0.2em 0.5em 0;
       color: #908989;
       font-size: 17px; }
+
+.project h1 {
+  font-size: 60px;
+  padding-bottom: 10px; }
+
+.project .content img {
+  width: 100%;
+  height: auto; }
+
+.project .content p {
+  font-size: 20px; }
+
+.project-back {
+  width: 47px;
+  height: 47px;
+  background-color: #b0cdc9;
+  border-radius: 10px;
+  font-size: 20px;
+  position: fixed;
+  top: 6rem;
+  left: 1rem; }
 
 /* Footer
    ========================================================================== */
@@ -795,57 +837,10 @@ footer {
   font-size: 16px;
   padding: 16px 32px; }
 
-.kolomEen,
-.kolomTwee {
-  width: 100%; }
-
 .headertekst {
   display: flex;
   align-items: center;
   font-size: 18px; }
-
-/* project */
-.project-back {
-  width: 47px;
-  height: 47px;
-  background-color: #b0cdc9;
-  border-radius: 10px;
-  font-size: 20px;
-  position: fixed;
-  top: 6rem;
-  left: 1rem; }
-
-.project section {
-  padding: 20px; }
-
-.project section.full {
-  min-height: calc(100vh - 5rem); }
-
-.project section.full h1 {
-  font-size: 60px;
-  padding-bottom: 10px; }
-
-.kolomTwee h1 {
-  padding-bottom: 20px; }
-
-.project section.large {
-  min-height: 75vh; }
-
-.project section.medium {
-  min-height: 50vh; }
-
-.project section.small {
-  min-height: 25vh; }
-
-.project section img {
-  width: 100%;
-  height: auto; }
-
-.project section p {
-  font-size: 20px; }
-
-.project .headertekst {
-  font-size: 20px; }
 
 /*
  * Contact
@@ -902,35 +897,6 @@ footer {
  */
 /* Tablet */
 @media screen and (min-width: 481px) {
-  /* Sections */
-  section.centreren {
-    display: flex;
-    align-items: center; }
-  section.centreren .kolomEen,
-  section.centreren .kolomTwee {
-    align-items: center; }
-  .kolomEen,
-  .kolomTwee {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid; }
-  .kolomEen {
-    grid-template-columns: 1fr; }
-  .kolomTwee {
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 20px; }
-  /* About */
-  .about .hero {
-    background-position: right -275px bottom;
-    padding-top: 20px; }
-  .about .titel {
-    max-width: 1000px;
-    margin: 0 auto;
-    width: 100%; }
-  /* Projecten */
-  .project section img {
-    height: 500px;
-    width: auto; }
   /* Contact */
   .contact-form {
     width: 75%; } }

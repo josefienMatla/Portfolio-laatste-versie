@@ -335,6 +335,12 @@ section {
 /* Home */
 .home {
 	.hero {
+		padding: 200px 1rem 1rem;
+		background-image: url('../img/josefien-malta.png');
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		background-size: auto 93%;
+
 		.title {
 			font-size: 50px;
 		}
@@ -393,12 +399,29 @@ section {
 /* About */
 .about {
 	.hero {
+		background-image: url('../img/josefien-malta.png');
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		background-size: auto 93%;
 		font-size: 20px;
 	}
 
 	.content img {
 		width: 100%;
 		height: auto;
+	}
+
+	// Desktop
+	@media (#{$bp-larger-than-tablet}) {
+		.hero {
+			background-position: right -275px bottom;
+		}
+
+		.titel {
+			max-width: 1000px;
+			margin: 0 auto;
+			width: 100%;
+		}
 	}
 }
 
