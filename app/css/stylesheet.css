@@ -437,6 +437,11 @@ template {
   display: table;
   clear: both; }
 
+@media (min-width: 750px) {
+  .row.centered {
+    display: flex;
+    align-items: center; } }
+
 /* General
    ========================================================================== */
 *,

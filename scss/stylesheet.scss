@@ -33,6 +33,14 @@ $bp-larger-than-desktophd: 'min-width: 1200px';
 
 @import 'skeleton-scss/scss/modules/grid';
 
+// Desktop
+@media (#{$bp-larger-than-tablet}) {
+	.row.centered {
+		display: flex;
+		align-items: center;
+	}
+}
+
 /* General
    ========================================================================== */
 
