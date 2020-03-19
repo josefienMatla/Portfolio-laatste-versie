@@ -33,14 +33,6 @@ $bp-larger-than-desktophd: 'min-width: 1200px';
 
 @import 'skeleton-scss/scss/modules/grid';
 
-// Desktop
-@media (#{$bp-larger-than-tablet}) {
-	.row.centered {
-		display: flex;
-		align-items: center;
-	}
-}
-
 /* General
    ========================================================================== */
 
@@ -133,6 +125,11 @@ li {
 a {
 	color: black;
 	text-decoration: none;
+}
+
+img.centered {
+	display: block;
+	margin: 0 auto;
 }
 
 /* Header
@@ -281,6 +278,32 @@ section {
 	&.green {
 		background-color: #d3ebe8;
 	}
+
+	&.full {
+		min-height: calc(100vh - 5rem);
+	}
+
+	&.large {
+		min-height: 75vh;
+	}
+
+	&.medium {
+		min-height: 50vh;
+	}
+
+	&.small {
+		min-height: 25vh;
+	}
+}
+
+// Desktop
+@media (#{$bp-larger-than-tablet}) {
+	section.centered {
+		&, .row {
+			display: flex;
+			align-items: center;
+		}
+	}
 }
 
 /*
@@ -292,11 +315,6 @@ section {
 	flex-direction: column;
 	justify-content: center;
 	min-height: calc(100vh - 5rem);
-	padding: 200px 1rem 1rem;
-	background-image: url('../img/josefien-malta.png');
-	background-position: center bottom;
-	background-repeat: no-repeat;
-	background-size: auto 93%;
 
 	.wrapper {
 		display: flex;
@@ -441,6 +459,35 @@ section {
 	}
 }
 
+.project {
+	h1 {
+		font-size: 60px;
+		padding-bottom: 10px;
+	}
+
+	.content {
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		p {
+			font-size: 20px;
+		}
+	}
+}
+
+.project-back {
+	width: 47px;
+	height: 47px;
+	background-color: #b0cdc9;
+	border-radius: $global-radius;
+	font-size: 20px;
+	position: fixed;
+	top: 6rem;
+	left: 1rem;
+}
+
 /* Footer
    ========================================================================== */
 
@@ -516,69 +563,10 @@ footer {
 	padding: 16px 32px;
 }
 
-.kolomEen,
-.kolomTwee {
-	width: 100%;
-}
-
 .headertekst {
 	display: flex;
 	align-items: center;
 	font-size: 18px;
-}
-
-/* project */
-.project-back {
-	width: 47px;
-	height: 47px;
-	background-color: #b0cdc9;
-	border-radius: $global-radius;
-	font-size: 20px;
-	position: fixed;
-	top: 6rem;
-	left: 1rem;
-}
-
-.project section {
-	padding: 20px;
-}
-
-.project section.full {
-	min-height: calc(100vh - 5rem);
-}
-
-.project section.full h1 {
-	font-size: 60px;
-	padding-bottom: 10px;
-}
-
-.kolomTwee h1 {
-	padding-bottom: 20px;
-}
-
-.project section.large {
-	min-height: 75vh;
-}
-
-.project section.medium {
-	min-height: 50vh;
-}
-
-.project section.small {
-	min-height: 25vh;
-}
-
-.project section img {
-	width: 100%;
-	height: auto;
-}
-
-.project section p {
-	font-size: 20px;
-}
-
-.project .headertekst {
-	font-size: 20px;
 }
 
 /*
@@ -640,58 +628,15 @@ footer {
 	background: #2a564f;
 }
 
-
-
 /*
  * Responsive
  */
 
 /* Tablet */
 @media screen and (min-width: 481px) {
-	/* Sections */
-	section.centreren {
-		display: flex;
-		align-items: center;
-	}
 
-	section.centreren .kolomEen,
-	section.centreren .kolomTwee {
-		align-items: center;
-	}
 
-	.kolomEen,
-	.kolomTwee {
-		max-width: 1000px;
-		margin: 0 auto;
-		display: grid;
-	}
 
-	.kolomEen {
-		grid-template-columns: 1fr;
-	}
-
-	.kolomTwee {
-		grid-template-columns: repeat(2, 1fr);
-		grid-column-gap: 20px;
-	}
-
-	/* About */
-	.about .hero {
-		background-position: right -275px bottom;
-		padding-top: 20px;
-	}
-
-	.about .titel {
-		max-width: 1000px;
-		margin: 0 auto;
-		width: 100%;
-	}
-
-	/* Projecten */
-	.project section img {
-		height: 500px;
-		width: auto;
-	}
 
 	/* Contact */
 	.contact-form {
