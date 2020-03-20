@@ -343,7 +343,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	min-height: calc(100vh - 5rem);
+	height: calc(100vh - 5rem);
 
 	.wrapper {
 		display: flex;
@@ -362,6 +362,7 @@ section {
 
 .home .hero,
 .about .hero {
+	min-height: 640px;
 	background-image: url('../img/josefien-malta.png');
 	background-repeat: no-repeat;
 	background-position: center bottom;
