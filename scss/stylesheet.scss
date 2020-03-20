@@ -119,6 +119,30 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 1rem;
 }
 
+h1 {
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
 p {
 	margin-bottom: 1rem;
 }
@@ -484,9 +508,8 @@ section {
 }
 
 .project {
-	h1 {
+	.hero-title {
 		font-size: 60px;
-		padding-bottom: 10px;
 	}
 
 	.content {
@@ -548,16 +571,16 @@ section {
 	button {
 		display: inline-block;
 		padding: 1rem;
+		background-color: #3f7a6f;
 		border: 4px solid #3f7a6f;
 		border-radius: 6px;
-		background: #3f7a6f;
 		color: #fff;
 		font-size: 16px;
 		text-transform: uppercase;
 
 		&:hover {
 			border: 4px solid #2a564f;
-			background: #2a564f;
+			background-color: #2a564f;
 		}
 	}
 
